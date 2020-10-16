@@ -1,0 +1,190 @@
+body {
+    background: url(12_col.gif) center top repeat-y;
+    background-size: 90%;
+}
+.section {
+    border: 1px solid #333;
+    height: 100px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.Box1 {
+    grid-area: Box1;
+}
+
+.Box2 {
+    grid-area: Box2;
+}
+
+.Box3 {
+    grid-area: Box3;
+}
+
+.Content {
+    grid-area: Content;
+}
+
+.Sidebar {
+    grid-area: Sidebar;
+}
+
+.footer{
+    grid-area: footer;
+
+}
+
+.Footer1 {
+    grid-area: Footer1;
+}
+
+.Footer2 {
+    grid-area: Footer2;
+}
+
+.Footer3 {
+    grid-area: Footer3;
+}
+
+.Footer4 {
+    grid-area: Footer4;
+}
+/*till en dator*/
+#container  {
+    width: 89%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header header header header header header header header header header" 
+    "Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2 Box2 Box2 Box3 Box3"
+    "Content Content Content Content Content Content Content Content Content Sidebar Sidebar Sidebar "
+    "footer footer footer footer footer footer footer footer footer footer footer footer "
+
+    
+}
+.footer {
+
+    display: grid;
+    gap: 2%;
+    padding: 10px;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "Footer1  Footer2 Footer3 Footer4";
+  
+}
+
+/* en liten dator*/
+
+@media screen and (max-width: 1200px) and (min-width: 960px) {
+    #container {
+        width: 700px;
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "header header header header header header header header header header header header" 
+        "Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2 Box3 Box3 Box3" 
+        "Content Content Content Content Content Content Content Content Sidebar Sidebar Sidebar Sidebar" 
+        "footer footer footer footer footer footer footer footer footer footer footer footer ";
+        gap: 2%;
+    }
+    .footer {
+
+        display: grid;
+        gap: 2%;
+        padding: 10px;
+    
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: "Footer1  Footer2 Footer3 Footer4";
+      
+    }
+}
+
+
+/* Ipad */
+
+@media screen and (max-width: 960px) and (min-width: 768px) {
+    #container {
+        width: 89%;
+        margin: 0 auto;
+        gap: 2%;
+        display: grid;
+        
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header header header header"
+        "Box1 Box1 Box2 Box2 Box3 Box3" 
+        "Content Content Content Sidebar Sidebar Sidebar"
+        "footer footer footer footer footer footer"
+        "footer footer footer footer footer footer"
+        ;
+      
+    }
+    .footer {
+        height: 100%;
+        display: grid;
+        gap: 2%;
+        padding: 5px;
+    
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "Footer1 Footer2" 
+        "Footer3 Footer4"
+        ;
+      
+    }
+}
+
+
+/* till mobilen */
+
+@media screen and (max-width: 768px) {
+    #container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        gap: 2%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas: 
+        "header" 
+        "Box1"
+        "Box2"
+        "Box3"
+        "Content" 
+        "Sidebar" 
+        "footer" 
+        "footer" 
+        "footer" 
+        "footer";
+       
+    }
+    .footer {
+
+        display: grid;
+        gap: 2%;
+        padding: 5px;
+        height: 100%;
+        
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "Footer1" 
+        "Footer2" 
+        "Footer3" 
+        "Footer4"
+        ;
+      
+    }
+}
